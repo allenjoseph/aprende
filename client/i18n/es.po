@@ -1,0 +1,77 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.7\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: login/login.html:12
+msgid "¿Escribiste bien tu correo? ¿sí? entonces"
+msgstr "¿Escribiste bien tu correo? ¿sí? entonces"
+
+#: login/register-modal.html:10
+msgid "Código enviado"
+msgstr "Código enviado"
+
+#: login/login.html:7
+msgid "Correo electrónico"
+msgstr "Correo electrónico"
+
+#: login/register-modal.html:15
+msgid "El código ingresado es inválido."
+msgstr "El código ingresado es inválido."
+
+#: layout/footer.html:4
+msgid "Español"
+msgstr "Español"
+
+#: layout/footer.html:5
+msgid "Inglés"
+msgstr "Inglés"
+
+#: login/register-modal.html:12
+msgid "Ingresa aqui el código que te hemos enviado."
+msgstr "Ingresa aqui el código que te hemos enviado."
+
+#: login/register-modal.html:33
+msgid "Ingresar"
+msgstr "Ingresar"
+
+#: login/login.html:9
+msgid "Presiona enter para continuar."
+msgstr "Presiona enter para continuar."
+
+#: video-chat/video-chat.html:9
+msgid "presiona enter para enviar."
+msgstr "presiona enter para enviar."
+
+#: login/login.html:13
+msgid "regístrate."
+msgstr "regístrate."
+
+#: login/register-modal.html:3
+msgid "Revisa tu correo electrónico!"
+msgstr "Revisa tu correo electrónico!"
+
+#: layout/header.html:25
+msgid "Salir"
+msgstr "Salir"
+
+#: login/register-modal.html:24
+msgid "Sólo nos hace falta tu nombre."
+msgstr "Sólo nos hace falta tu nombre."
+
+#: login/register-modal.html:22
+msgid "Tú nombre"
+msgstr "Tú nombre"
+
+#: login/register-modal.html:31
+msgid "Validar"
+msgstr "Validar"

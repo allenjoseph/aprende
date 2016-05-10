@@ -1,0 +1,69 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+
+#: login/login.html:12
+msgid "¿Escribiste bien tu correo? ¿sí? entonces"
+msgstr ""
+
+#: login/register-modal.html:10
+msgid "Código enviado"
+msgstr ""
+
+#: login/login.html:7
+msgid "Correo electrónico"
+msgstr ""
+
+#: login/register-modal.html:15
+msgid "El código ingresado es inválido."
+msgstr ""
+
+#: layout/footer.html:4
+msgid "Español"
+msgstr ""
+
+#: layout/footer.html:5
+msgid "Inglés"
+msgstr ""
+
+#: login/register-modal.html:12
+msgid "Ingresa aqui el código que te hemos enviado."
+msgstr ""
+
+#: login/register-modal.html:33
+msgid "Ingresar"
+msgstr ""
+
+#: login/login.html:9
+msgid "Presiona enter para continuar."
+msgstr ""
+
+#: video-chat/video-chat.html:9
+msgid "presiona enter para enviar."
+msgstr ""
+
+#: login/login.html:13
+msgid "regístrate."
+msgstr ""
+
+#: login/register-modal.html:3
+msgid "Revisa tu correo electrónico!"
+msgstr ""
+
+#: layout/header.html:25
+msgid "Salir"
+msgstr ""
+
+#: login/register-modal.html:24
+msgid "Sólo nos hace falta tu nombre."
+msgstr ""
+
+#: login/register-modal.html:22
+msgid "Tú nombre"
+msgstr ""
+
+#: login/register-modal.html:31
+msgid "Validar"
+msgstr ""

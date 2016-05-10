@@ -1,0 +1,31 @@
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" ng-init="isCollapsed = true" ng-click="isCollapsed = !isCollapsed">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a ui-sref="home" class="navbar-brand">Aprende</a>
+		</div>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" uib-collapse="isCollapsed">
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown" uib-dropdown>
+					<a class="dropdown-toggle" uib-dropdown-toggle>
+						{{user}}&nbsp;<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu" uib-dropdown-menu>
+						<li><a>Action</a></li>
+						<li><a>Another action</a></li>
+						<li><a>Something else here</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a translate>Salir</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container-fluid -->
+</nav>

@@ -1,0 +1,30 @@
+html {
+	background: #f9f9f9;
+	overflow: -moz-scrollbars-vertical;
+	overflow-y: scroll;
+}
+html::-webkit-scrollbar{
+	background-color: #ddd;
+	width: 12px;
+}
+html::-webkit-scrollbar-thumb {
+	background-color: #666;
+}
+body {
+	background: #f9f9f9;
+}
+/* Fix problem with angular-bootstrap */
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.footer {
+	bottom: 0;
+	height: 60px;
+	position: absolute;
+	width: 100%;
+}
+.login-box {
+	margin-top: 20%;
+}
+.chat-message {
+	margin: 0;
+}

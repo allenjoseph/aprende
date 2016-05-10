@@ -1,0 +1,35 @@
+<div class="modal-header">
+	<button type="button" class="close" ng-click="$close()">&times;</button>
+	<h4 class="modal-title" translate>Revisa tu correo electrónico!</h4>
+</div>
+<div class="modal-body">
+	<form name="form">
+
+		<div class="form-group" ng-class="{'has-warning': form.code.$error.required, 'has-success': vm.validCode, 'has-error': vm.invalidCode}">
+
+			<label class="control-label" translate>Código enviado</label>
+
+			<input class="form-control" type="text" name="code" placeholder="{{'Ingresa aqui el código que te hemos enviado.' | translate}}" ng-model="code" on-enter="vm.validateCode(email, code)" required>
+
+			<span class="help-block" ng-show="vm.invalidCode">
+				<span translate>El código ingresado es inválido.</span>
+			</span>
+
+		</div>
+
+		<div ng-show="vm.validCode" class="form-group" ng-class="{'has-warning': form.name.$error.required}">
+
+			<label class="control-label" translate>Tú nombre</label>
+
+			<input class="form-control" name="name" type="text" placeholder="{{'Sólo nos hace falta tu nombre.' | translate}}" ng-model="name" on-enter="vm.registerUser(name)" required>
+
+		</div>
+	</form>
+</div>
+<div class="modal-footer">
+
+	<button type="button" class="btn btn-primary" ng-show="!vm.validCode" ng-disabled="form.code.$error.required" ng-click="vm.validateCode(email, code)" translate>Validar</button>
+
+	<button type="button" class="btn btn-primary" ng-show="vm.validCode" ng-disabled="form.$invalid" ng-click="vm.registerUser(name)" translate>Ingresar</button>
+
+</div>
