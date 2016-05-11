@@ -192,11 +192,6 @@ gulp.task('connect', function () {
 			console.log('exec error:', error);
 		}
 	});
-	/*$.connect.server({
-		root: ['dist'],
-		port: 8000,
-		livereload: true
-	});*/
 });
 
 gulp.task('build', function() {
@@ -224,7 +219,7 @@ gulp.task('release', function() {
 gulp.task('dev', function(){
 	return runSequence(
 		'build',
-		'connect',
+		//'connect',
 		'watch'
 	);
 });

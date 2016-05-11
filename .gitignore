@@ -18,4 +18,8 @@ dist/
 # Logs
 *.log
 
+# Database
 *.db
+
+# Intellij
+.idea/
