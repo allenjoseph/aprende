@@ -12,7 +12,7 @@ var ext = {
 	js: '*.js',
 	css: '*.css',
 	pot: '*.po'
-}
+};
 
 var config = {
 	dist: {
