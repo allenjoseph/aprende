@@ -5,6 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 
 #: login/login.html:12
+#: login/login.html:19
 msgid "¿Escribiste bien tu correo? ¿sí? entonces"
 msgstr ""
 
@@ -32,6 +33,10 @@ msgstr ""
 msgid "Ingresa aqui el código que te hemos enviado."
 msgstr ""
 
+#: login/login.html:16
+msgid "Ingresa tu contraseña para ingresar."
+msgstr ""
+
 #: login/register-modal.html:33
 msgid "Ingresar"
 msgstr ""
@@ -40,11 +45,12 @@ msgstr ""
 msgid "Presiona enter para continuar."
 msgstr ""
 
-#: video-chat/video-chat.html:9
+#: chat/chat.html:7
 msgid "presiona enter para enviar."
 msgstr ""
 
 #: login/login.html:13
+#: login/login.html:20
 msgid "regístrate."
 msgstr ""
 

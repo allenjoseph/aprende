@@ -34,7 +34,7 @@ module.exports = function(app){
 
 	function validateRegister(req, res){
 		userCtrl
-			.validate(req.body.email, req.body.code)
+			.validateCode(req.body.email, req.body.code)
 			.then(ok, response(res).fail);
 
 		function ok(user){
@@ -59,7 +59,7 @@ module.exports = function(app){
 			var data = {
 				token: token,
 				nombre: user
-			}
+			};
 
 			res.json({ok: true, data : token});
 		}
@@ -67,7 +67,7 @@ module.exports = function(app){
 
 	app
 		.route('/users')
-		.put(updateUser)
+		.put(updateUser);
 
 	function updateUser(req, res){
 		var fields = {

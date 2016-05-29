@@ -2,8 +2,9 @@
 
 var orm = require('./../persistence/orm');
 var Sequelize = require('sequelize');
+var bcrypt = require('bcrypt');
 
-var files = {
+var fields = {
 	email: {
 		type: Sequelize.STRING,
 		unique: true,
@@ -20,13 +21,24 @@ var files = {
 	},
 	code: {
 		type: Sequelize.BOOLEAN
-	}
+	},
+	password: Sequelize.STRING
 };
 
 var options = {
-	freezeTableName: true
+	freezeTableName: true,
+	instanceMethods: {
+		comparePassword : function(candidate, cb) {
+			bcrypt.compare(candidate, this.getDataValue('password'), function(err, isMatch) {
+				if(err) {
+					return cb(err);
+				}
+				cb(null, isMatch);
+			});
+		}
+	}
 };
 
-var User = orm.define('users', files, options);
+var User = orm.define('users', fields, options);
 
 module.exports = User;

@@ -12,7 +12,8 @@
 			validateEmail: emailIsValid,
 			registerEmail: registerEmail,
 			validRegister: validRegister,
-			updateUser: updateUser
+			updateUser: updateUser,
+			login: login
 		};
 
 		return service;
