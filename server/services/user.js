@@ -55,4 +55,25 @@ function update(email, fields){
 	return deferred.promise;
 }
 
+function validateAuth(email, password){
+	var deferred = Q.defer();
+
+	User.findOne({
+		where: {email: email}
+	}).then(function(user){
+		user.comparePassword(password, function(err, isMatch){
+			if(err || !isMatch){
+				deferred.reject({ message: 'Invalid user or passowrd'});
+				return;
+			}
+			deferred.resolve(user.get({plain: true}));
+		});
+		//deferred.resolve(user && user.get({plain: true}));
+	}).catch(function(err){
+		deferred.reject(err);
+	});
+
+	return deferred.promise;
+}
+
 module.exports = service;

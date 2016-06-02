@@ -55,13 +55,7 @@ function validate(email, password){
 	userService
 		.findByEmail(email)
 		.then(function(user){
-			user.comparePassword(password, function(err, isMatch){
-				if(err || !isMatch){
-					deferred.reject({ message: 'Invalid user or passowrd'});
-					return;
-				}
-				deferred.resolve(user);
-			});
+			deferred.resolve(user);
 		});
 
 	return deferred.promise;

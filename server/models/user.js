@@ -27,7 +27,7 @@ var fields = {
 
 var options = {
 	freezeTableName: true,
-	classMethods: {
+	instanceMethods: {
 		comparePassword : function(candidate, cb) {
 			bcrypt.compare(candidate, this.getDataValue('password'), function(err, isMatch) {
 				if(err) {

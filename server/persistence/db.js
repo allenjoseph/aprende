@@ -7,7 +7,7 @@ var db = {
 };
 
 function syncTables(){
-	models.user.sync();
+	models.user.sync({ force: true });
 }
 
 module.exports = db;
