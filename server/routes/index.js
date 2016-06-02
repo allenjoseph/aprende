@@ -6,6 +6,7 @@ var routes = {
 
 function init(app){
 	return {
+		login: require('./login')(app),
 		user: require('./user')(app)
 	};
 }

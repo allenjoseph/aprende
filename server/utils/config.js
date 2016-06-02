@@ -12,7 +12,8 @@ var config = {
 	publicUrls:[
 		'/validate-email',
 		'/register-email',
-		'/validate-register'
+		'/validate-register',
+		'/login'
 	]
 };
 
