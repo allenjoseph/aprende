@@ -59,10 +59,10 @@ module.exports = function(app){
 
 			var data = {
 				token: token,
-				nombre: user
+				user: user
 			};
 
-			res.json({ok: true, data : token});
+			res.json({ok: true, data : data});
 		}
 	}
 };

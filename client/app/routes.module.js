@@ -44,11 +44,11 @@
 					'@body': {
 						controller: 'Main as vm',
 						templateUrl: 'main/main.html'
-					},
+					}/*,
 					'video-chat@home': {
 						controller: 'VideoChat as vm',
 						templateUrl: 'video-chat/video-chat.html'
-					}
+					}*/
 				}
 			});
 	}
