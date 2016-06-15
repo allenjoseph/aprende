@@ -4,9 +4,25 @@ module.exports = function(server){
 
 	var io = require('socket.io')(server);
 
-	io.on('connection', onConnection);
+	var chat = io.of('/chat');
+	
+	var clients = {};
+	
+	chat.on('connection', onChatConn);
 
-	function onConnection(socket){
+	function onChatConn(socket){
+		
+		socket.on('identify me',  function(user) {
+		    if( user && user.email && !clients[user.email]){
+		    	var client = {
+		    		user: user,
+		    		socketId : socket.id
+		    	};
+		    	
+		    	clients[user.email] = client;
+		    }
+		});
+		
 		socket.on('disconnect', function(){
 			//..
 		});

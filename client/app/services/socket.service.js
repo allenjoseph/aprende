@@ -11,9 +11,7 @@
 		/* jshint validthis: true */
 		var service = this;
 
-		var socket = window.io();
-
-		socket.emit('join', 'chat');
+		var socket = window.io('/chat');
 
 		socket.on('message', function(mesage){
 			$timeout(function(){
@@ -22,11 +20,18 @@
 		});
 
 		service.messages = [];
+		
+		service.identifyMe = function () {
+			socket.emit('identify me', $rootScope.user);		
+		};
 
 		service.sendMessage = function (mesage) {
 			//var mesage = { user: $rootScope.user, msg: msg };
 			service.messages.unshift(mesage);
 			socket.emit('message', mesage);
+		};
+		
+		service.sendInbox = function (message, receiver) {
 		};
 	}
 })();

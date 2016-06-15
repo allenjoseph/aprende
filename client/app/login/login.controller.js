@@ -5,9 +5,9 @@
 		.module('app')
 		.controller('Login', Login);
 
-	Login.$inject = ['$rootScope', '$state', '$uibModal', 'loginService', 'Notification'];
+	Login.$inject = ['$rootScope', '$state', '$uibModal', 'loginService', 'Notification', 'socket'];
 
-	function Login($rootScope, $state, $uibModal, loginService, Notification) {
+	function Login($rootScope, $state, $uibModal, loginService, Notification, socket) {
 		var vm = this;
 
 		vm.login = function(email, password){
@@ -17,6 +17,7 @@
 						loginService.login(email, password).then(function(res){
 							$rootScope.token = res.token;
 							$rootScope.user = res.user;
+							socket.identifyMe();
 							$state.go('home');
 						});
 					}
