@@ -3,7 +3,8 @@ var root = './';
 var paths = {
 	dist: root + 'dist/',
 	client: root + 'client2/',
-	vendor: root + 'bower_components/'
+	vendor: root + 'bower_components/',
+	temp: root + '.temp/'
 };
 
 exports.paths = paths;
@@ -28,6 +29,7 @@ exports.client = {
 	index: paths.client + 'index.html',
 	i18n: paths.client + 'i18n/',
 	js: paths.client + 'app/**/*.js',
+	ts: paths.client + 'app/**/*.ts',
 	sass: paths.client + 'sass/**/*.scss',
 	html: paths.client + 'app/**/*.html',
 	assets: paths.client + 'assets/**/*.*'

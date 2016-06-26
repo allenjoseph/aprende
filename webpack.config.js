@@ -1,8 +1,18 @@
 module.exports = {
     output: {
-        filename: 'app.bundle.js'
+        filename: 'app.bundle.js',
+        sourceMapFilename: 'app.bundle.map'
     },
     module: {
+        preLoaders: [{
+            test: /\.js$/,
+            loader: 'source-map-loader',
+            exclude: [
+                // these packages have problems with their sourcemaps
+                './node_modules/rxjs',
+                './node_modules/@angular'
+            ]
+        }],
         loaders: [{
             test: /\.ts$/,
             exclude: /node_modules/,
