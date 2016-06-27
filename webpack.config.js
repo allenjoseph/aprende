@@ -21,8 +21,14 @@ module.exports = {
     },
     resolve: {
         extensions: ['', '.js', '.ts'],
-        root: './client2',
+        root: './.temp',
         modulesDirectories: ['node_modules'],
     },
-    devtool: 'source-map'
+    /**
+    * Developer tool to enhance debugging
+    *
+    * See: http://webpack.github.io/docs/configuration.html#devtool
+    * See: https://github.com/webpack/docs/wiki/build-performance#sourcemaps
+    */
+    devtool: 'cheap-eval-source-map'
 };

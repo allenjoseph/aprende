@@ -15,7 +15,7 @@ gulp.task('html2js', function(){
 });
 
 gulp.task('embedTemplates', function () {
-    gulp.src(config.client.ts)
+    return gulp.src(config.client.ts)
         .pipe(embedTemplates())
         .pipe(gulp.dest(config.paths.temp));
 });
