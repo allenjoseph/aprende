@@ -1,29 +1,68 @@
+var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
+    
+    entry:{
+        polyfills: './client2/app/app.polyfills.ts',
+        vendor: './client2/app/app.vendor.ts',
+        main: './client2/app/app.main.ts'
+    },
+    
     output: {
-        filename: 'app.bundle.js',
-        sourceMapFilename: 'app.bundle.map'
+        filename: '[name].bundle.js',
+        sourceMapFilename: '[name].map',
+        path: './dist'
     },
+    
     module: {
-        preLoaders: [{
-            test: /\.js$/,
-            loader: 'source-map-loader',
-            exclude: [
-                // these packages have problems with their sourcemaps
-                './node_modules/rxjs',
-                './node_modules/@angular'
-            ]
-        }],
-        loaders: [{
-            test: /\.ts$/,
-            exclude: /node_modules/,
-            loader: 'awesome-typescript-loader',
-        }]
+        preLoaders: [
+            {
+                test: /\.js$/,
+                loader: 'source-map-loader',
+                exclude: [
+                    // these packages have problems with their sourcemaps
+                    './node_modules/rxjs',
+                    './node_modules/@angular'
+                ]
+            }
+        ],
+        
+        loaders: [
+            {
+                test: /\.ts$/,
+                exclude: /node_modules/,
+                loader: 'awesome-typescript-loader',
+            },
+            
+            {
+                test: /\.html$/,
+                loader: 'raw-loader',
+                exclude: ['./client2/index.html']
+            }
+        ]
     },
+    
     resolve: {
         extensions: ['', '.js', '.ts'],
-        root: './.temp',
-        modulesDirectories: ['node_modules'],
+        root: './client2',
+        modulesDirectories: ['./node_modules', './client2']
     },
+    
+    resolveLoader: {
+        root: 'aprende/node_modules'
+    },
+    
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin({
+            name: ['main', 'vendor', 'polyfills']
+        }),
+        
+        new HtmlWebpackPlugin({
+            template: './client2/index.html',
+            chunksSortMode: 'dependency'
+        })
+    ],
     /**
     * Developer tool to enhance debugging
     *

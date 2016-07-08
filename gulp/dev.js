@@ -11,9 +11,6 @@ gulp.task('dev', function(){
 gulp.task('dev:ts', function(){
 	return runSequence(
 		'clean',
-		'copy:vendor-client2',
-		'copy:index-client2',
-		'embedTemplates',
 		'webpack'
 	);
 });

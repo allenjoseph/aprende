@@ -34,21 +34,3 @@ gulp.task('copy', ['copy:vendor', 'copy:fonts', 'copy:js', 'copy:assets'], funct
 	.src(config.client.index)
 	.pipe(gulp.dest(config.paths.dist));
 });
-
-gulp.task('copy:vendor-client2', function(){
-	return gulp
-	.src([
-		'node_modules/core-js/client/shim.min.js',
-		'node_modules/zone.js/dist/zone.js',
-		'node_modules/reflect-metadata/Reflect.js'
-	])
-	.pipe(gulp.dest(config.paths.dist + 'lib'));
-});
-
-gulp.task('copy:index-client2', function(){
-	return gulp
-	.src([
-		'client2/index.html'
-	], { base : './client2' })
-	.pipe(gulp.dest(config.paths.dist));
-});
