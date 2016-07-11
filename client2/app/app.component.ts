@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import ComponentHtml from './app.component.html';
 
 @Component({
     selector: 'aprende-app',
-    templateUrl: ComponentHtml
+    templateUrl: require('./app.component.html')
 })
 export class AppComponent {
     hello = 'Hello World';
