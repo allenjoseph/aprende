@@ -2,7 +2,7 @@
 
 var userService = require('./../services/user');
 var helpers = require('./../utils/helpers');
-var bcrypt = require('bcrypt');
+var bcrypt = require('bcryptjs');
 var Q = require('q');
 
 var ctrl = {

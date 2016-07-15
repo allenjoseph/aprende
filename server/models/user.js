@@ -2,7 +2,7 @@
 
 var orm = require('./../persistence/orm');
 var Sequelize = require('sequelize');
-var bcrypt = require('bcrypt');
+var bcrypt = require('bcryptjs');
 
 var fields = {
 	email: {
