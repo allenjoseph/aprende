@@ -3,7 +3,9 @@
         "target": "es5",
         "module": "commonjs",
         "moduleResolution": "node",
-        "sourceMap": true
+        "sourceMap": true,
+        "outDir": "dist",
+        "rootDir": "client2/app"
     },
     "exclude": [
         "node_modules"
