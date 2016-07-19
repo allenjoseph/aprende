@@ -1,5 +1,5 @@
-import {module} from 'angular';
-import Authentication from './auth/authentication.run.ts';
+namespace App {
 
-module('aprende', [])
-    .run(Authentication);
+    angular.module('aprende', [])
+        .run(Authentication);
+}
