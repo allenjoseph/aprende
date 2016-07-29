@@ -59,5 +59,5 @@ module.exports = {
 };
 
 function root (path) {
-    return '/home/ubuntu/workspace/' + path;
+    return __dirname.concat('/../', path);
 }

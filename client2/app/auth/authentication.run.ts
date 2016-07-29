@@ -1,8 +1,11 @@
-export default class Authentication {
-    
-    /* @ngInject */
-    constructor($rootScope){
+namespace App{
+
+    export class Authentication {
         
-        $rootScope.$on('$stateChangeStart', (event, toState) => {});
+        /* @ngInject */
+        constructor($rootScope: ng.IRootScopeService){
+            
+            $rootScope.$on('$stateChangeStart', (event, toState) => {});
+        }
     }
 }

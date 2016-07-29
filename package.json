@@ -2,12 +2,12 @@
   "name": "aprende-fe",
   "version": "0.0.1",
   "private": true,
-  "scripts":{
+  "scripts": {
     "postinstall": "typings install"
   },
   "dependencies": {
     "angular": "^1.5.7",
-    "bcrypt": "^0.8.6",
+    "bcryptjs": "^2.3.0",
     "body-parser": "^1.15.0",
     "core-js": "^2.4.0",
     "express": "^4.13.4",
