@@ -46,16 +46,16 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: root('client2/index.html'),
             chunksSortMode: 'dependency'
-        }),
+        })/*,
         
         new webpack.optimize.UglifyJsPlugin({
             compressor: {
                 warnings: false
             }
-        })
-    ]/*,
+        })*/
+    ],
     
-    devtool: 'cheap-eval-source-map'*/
+    devtool: 'inline-source-map'
 };
 
 function root (path) {
